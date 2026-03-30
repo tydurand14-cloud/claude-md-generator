@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate production-ready CLAUDE.md files for Claude Code. Describe your project, get a complete context file in seconds.">
+  <title>CLAUDE.md Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <span class="header-logo">CLAUDE.md Generator</span>
+    <span class="header-tag">free</span>
+  </header>
+
+  <main class="container">
+
+    <div class="panel">
+      <div class="panel-header">Your Project</div>
+      <div class="panel-body">
+        <form id="generator-form">
+
+          <div class="field">
+            <label for="api-key">Claude API Key</label>
+            <input
+              type="password"
+              id="api-key"
+              name="api-key"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="sk-ant-..."
+              required
+            >
+            <p class="hint">Runs in your browser. Key is never stored or sent to our servers. <a href="https://console.anthropic.com/keys" target="_blank" rel="noopener">Get a key</a></p>
+          </div>
+
+          <div class="field">
+            <label for="project-name">Project Name</label>
+            <input
+              type="text"
+              id="project-name"
+              name="project-name"
+              placeholder="my-api-service"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="tech-stack">Tech Stack</label>
+            <input
+              type="text"
+              id="tech-stack"
+              name="tech-stack"
+              placeholder="Python 3.12, FastAPI, PostgreSQL, Docker"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="purpose">What does it do?</label>
+            <textarea
+              id="purpose"
+              name="purpose"
+              placeholder="REST API for a SaaS product. Handles auth, billing, and user data. Deployed to AWS Lambda."
+              required
+            ></textarea>
+          </div>
+
+          <div class="field">
+            <label for="team-size">Team Size</label>
+            <select id="team-size" name="team-size">
+              <option value="solo">Solo</option>
+              <option value="small">Small (2-5)</option>
+              <option value="medium">Medium (6-15)</option>
+              <option value="large">Large (15+)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="notes">Anything else? <span style="font-weight:400;color:var(--text-muted)">(optional)</span></label>
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="e.g. Has a complex deploy process, uses a monorepo, specific testing requirements..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="generate-btn">
+            Generate CLAUDE.md
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="panel output-panel">
+      <div class="output-toolbar">
+        <span class="output-toolbar-label">Output</span>
+        <div class="output-actions">
+          <span id="output-status" class="status" style="display:none"></span>
+          <button class="btn btn-sm" id="copy-btn" disabled>Copy</button>
+          <button class="btn btn-sm" id="download-btn" disabled>Download</button>
+        </div>
+      </div>
+      <div id="output">
+        <div class="placeholder">Your CLAUDE.md will appear here</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    Built with <a href="https://github.com/tydurand14-cloud/velocity-kit" target="_blank" rel="noopener">VelocityKit</a> &mdash;
+    <a href="https://github.com/tydurand14-cloud/claude-md-generator" target="_blank" rel="noopener">Source</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
