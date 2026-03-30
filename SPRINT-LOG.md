@@ -23,7 +23,7 @@
 
 **Task 3 — Review chain:** DONE. PASS across all layers. Security: API key handling correct, no XSS vectors (textContent not innerHTML). Frontend: semantic HTML, labeled inputs, mobile responsive. Simplification: each file under 200 lines, clean separation.
 
-**Task 4 — Deploy to GitHub Pages:** BLOCKED. GitHub CLI not authenticated. Requires `gh auth login` (interactive TTY, Tyler runs once). Code is committed and ready to push. Blocker is auth, not the tool.
+**Task 4 — Deploy to GitHub Pages:** DONE. Live at https://tydurand14-cloud.github.io/claude-md-generator/ — repo: github.com/tydurand14-cloud/claude-md-generator
 
 **Task 5 — Launch product:** DONE. Social drafts written, HN post written, business-state.md updated.
 
